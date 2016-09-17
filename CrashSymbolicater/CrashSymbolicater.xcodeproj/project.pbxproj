@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CCB2FDA55548228A2EDA5D0 /* libPods-CrashSymbolicaterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B479D97A1430A0E4037881 /* libPods-CrashSymbolicaterTests.a */; };
 		0EBCCC4C1D8D57ED0057EE20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBCCC4B1D8D57ED0057EE20 /* AppDelegate.m */; };
 		0EBCCC4F1D8D57ED0057EE20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBCCC4E1D8D57ED0057EE20 /* main.m */; };
 		0EBCCC521D8D57ED0057EE20 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBCCC511D8D57ED0057EE20 /* ViewController.m */; };
@@ -14,6 +15,8 @@
 		0EBCCC571D8D57ED0057EE20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EBCCC551D8D57ED0057EE20 /* Main.storyboard */; };
 		0EBCCC621D8D57EE0057EE20 /* CrashSymbolicaterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBCCC611D8D57EE0057EE20 /* CrashSymbolicaterTests.m */; };
 		0EBCCC6D1D8D57EE0057EE20 /* CrashSymbolicaterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBCCC6C1D8D57EE0057EE20 /* CrashSymbolicaterUITests.m */; };
+		10DB9BBF39F1C835450AFE22 /* libPods-CrashSymbolicaterUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E5951C7CD2B625C6DD9AD3 /* libPods-CrashSymbolicaterUITests.a */; };
+		861CBF28FEFE4527F997970F /* libPods-CrashSymbolicater.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0FA82D5AAAA30605E82602 /* libPods-CrashSymbolicater.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03EAF3B3F7ED4D1E790793C1 /* Pods-CrashSymbolicaterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrashSymbolicaterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrashSymbolicaterTests/Pods-CrashSymbolicaterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0EBCCC471D8D57ED0057EE20 /* CrashSymbolicater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrashSymbolicater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBCCC4A1D8D57ED0057EE20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0EBCCC4B1D8D57ED0057EE20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 		0EBCCC681D8D57EE0057EE20 /* CrashSymbolicaterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrashSymbolicaterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBCCC6C1D8D57EE0057EE20 /* CrashSymbolicaterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrashSymbolicaterUITests.m; sourceTree = "<group>"; };
 		0EBCCC6E1D8D57EE0057EE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E0FA82D5AAAA30605E82602 /* libPods-CrashSymbolicater.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrashSymbolicater.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D8A754ED587D3F57BCBE09B /* Pods-CrashSymbolicaterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrashSymbolicaterUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrashSymbolicaterUITests/Pods-CrashSymbolicaterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		75E5951C7CD2B625C6DD9AD3 /* libPods-CrashSymbolicaterUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrashSymbolicaterUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76859493C7D5E7C137DE818D /* Pods-CrashSymbolicater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrashSymbolicater.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrashSymbolicater/Pods-CrashSymbolicater.debug.xcconfig"; sourceTree = "<group>"; };
+		8012E16752C66E0EFFC4EDB2 /* Pods-CrashSymbolicaterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrashSymbolicaterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrashSymbolicaterTests/Pods-CrashSymbolicaterTests.release.xcconfig"; sourceTree = "<group>"; };
+		99B479D97A1430A0E4037881 /* libPods-CrashSymbolicaterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrashSymbolicaterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B754D9E6971B8369A331F982 /* Pods-CrashSymbolicaterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrashSymbolicaterUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrashSymbolicaterUITests/Pods-CrashSymbolicaterUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E1FECFE1A7D890353A5AAC90 /* Pods-CrashSymbolicater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrashSymbolicater.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrashSymbolicater/Pods-CrashSymbolicater.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				861CBF28FEFE4527F997970F /* libPods-CrashSymbolicater.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CCB2FDA55548228A2EDA5D0 /* libPods-CrashSymbolicaterTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10DB9BBF39F1C835450AFE22 /* libPods-CrashSymbolicaterUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				0EBCCC601D8D57EE0057EE20 /* CrashSymbolicaterTests */,
 				0EBCCC6B1D8D57EE0057EE20 /* CrashSymbolicaterUITests */,
 				0EBCCC481D8D57ED0057EE20 /* Products */,
+				36BEDBBD8BC8A48EF6A218C1 /* Pods */,
+				62776334580EAC5D109922C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +154,29 @@
 			path = CrashSymbolicaterUITests;
 			sourceTree = "<group>";
 		};
+		36BEDBBD8BC8A48EF6A218C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76859493C7D5E7C137DE818D /* Pods-CrashSymbolicater.debug.xcconfig */,
+				E1FECFE1A7D890353A5AAC90 /* Pods-CrashSymbolicater.release.xcconfig */,
+				03EAF3B3F7ED4D1E790793C1 /* Pods-CrashSymbolicaterTests.debug.xcconfig */,
+				8012E16752C66E0EFFC4EDB2 /* Pods-CrashSymbolicaterTests.release.xcconfig */,
+				B754D9E6971B8369A331F982 /* Pods-CrashSymbolicaterUITests.debug.xcconfig */,
+				6D8A754ED587D3F57BCBE09B /* Pods-CrashSymbolicaterUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		62776334580EAC5D109922C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E0FA82D5AAAA30605E82602 /* libPods-CrashSymbolicater.a */,
+				99B479D97A1430A0E4037881 /* libPods-CrashSymbolicaterTests.a */,
+				75E5951C7CD2B625C6DD9AD3 /* libPods-CrashSymbolicaterUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0EBCCC711D8D57EE0057EE20 /* Build configuration list for PBXNativeTarget "CrashSymbolicater" */;
 			buildPhases = (
+				B43762E3E0F329FAC8A89586 /* [CP] Check Pods Manifest.lock */,
 				0EBCCC431D8D57ED0057EE20 /* Sources */,
 				0EBCCC441D8D57ED0057EE20 /* Frameworks */,
 				0EBCCC451D8D57ED0057EE20 /* Resources */,
+				3E0E93066141D2DAE967AEC8 /* [CP] Embed Pods Frameworks */,
+				69E15576D3832A97868E4F52 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0EBCCC741D8D57EE0057EE20 /* Build configuration list for PBXNativeTarget "CrashSymbolicaterTests" */;
 			buildPhases = (
+				36775AA0A5B2EB5D9E6DEB7E /* [CP] Check Pods Manifest.lock */,
 				0EBCCC591D8D57EE0057EE20 /* Sources */,
 				0EBCCC5A1D8D57EE0057EE20 /* Frameworks */,
 				0EBCCC5B1D8D57EE0057EE20 /* Resources */,
+				2768A406AA3341D7C08D6415 /* [CP] Embed Pods Frameworks */,
+				E9E4A3AC49DCC0422CA72ADA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0EBCCC771D8D57EE0057EE20 /* Build configuration list for PBXNativeTarget "CrashSymbolicaterUITests" */;
 			buildPhases = (
+				C3F6235BB47673E790F4F97A /* [CP] Check Pods Manifest.lock */,
 				0EBCCC641D8D57EE0057EE20 /* Sources */,
 				0EBCCC651D8D57EE0057EE20 /* Frameworks */,
 				0EBCCC661D8D57EE0057EE20 /* Resources */,
+				FF983FFBB45C7641844EDD93 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,6 +314,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2768A406AA3341D7C08D6415 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrashSymbolicaterTests/Pods-CrashSymbolicaterTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36775AA0A5B2EB5D9E6DEB7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3E0E93066141D2DAE967AEC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrashSymbolicater/Pods-CrashSymbolicater-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69E15576D3832A97868E4F52 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrashSymbolicater/Pods-CrashSymbolicater-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B43762E3E0F329FAC8A89586 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C3F6235BB47673E790F4F97A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E9E4A3AC49DCC0422CA72ADA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrashSymbolicaterTests/Pods-CrashSymbolicaterTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF983FFBB45C7641844EDD93 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrashSymbolicaterUITests/Pods-CrashSymbolicaterUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0EBCCC431D8D57ED0057EE20 /* Sources */ = {
@@ -410,6 +581,7 @@
 		};
 		0EBCCC721D8D57EE0057EE20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76859493C7D5E7C137DE818D /* Pods-CrashSymbolicater.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -423,6 +595,7 @@
 		};
 		0EBCCC731D8D57EE0057EE20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1FECFE1A7D890353A5AAC90 /* Pods-CrashSymbolicater.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -436,6 +609,7 @@
 		};
 		0EBCCC751D8D57EE0057EE20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03EAF3B3F7ED4D1E790793C1 /* Pods-CrashSymbolicaterTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -450,6 +624,7 @@
 		};
 		0EBCCC761D8D57EE0057EE20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8012E16752C66E0EFFC4EDB2 /* Pods-CrashSymbolicaterTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -464,6 +639,7 @@
 		};
 		0EBCCC781D8D57EE0057EE20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B754D9E6971B8369A331F982 /* Pods-CrashSymbolicaterUITests.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = NK43D9F8MS;
@@ -477,6 +653,7 @@
 		};
 		0EBCCC791D8D57EE0057EE20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D8A754ED587D3F57BCBE09B /* Pods-CrashSymbolicaterUITests.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = NK43D9F8MS;
@@ -507,6 +684,7 @@
 				0EBCCC731D8D57EE0057EE20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0EBCCC741D8D57EE0057EE20 /* Build configuration list for PBXNativeTarget "CrashSymbolicaterTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +693,7 @@
 				0EBCCC761D8D57EE0057EE20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0EBCCC771D8D57EE0057EE20 /* Build configuration list for PBXNativeTarget "CrashSymbolicaterUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +702,7 @@
 				0EBCCC791D8D57EE0057EE20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
