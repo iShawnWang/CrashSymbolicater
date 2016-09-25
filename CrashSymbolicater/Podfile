@@ -4,10 +4,7 @@
 target 'CrashSymbolicater' do
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
-
   # Pods for CrashSymbolicater
-pod 'Ono'
-pod 'AFNetworking'
   target 'CrashSymbolicaterTests' do
     inherit! :search_paths
     # Pods for testing

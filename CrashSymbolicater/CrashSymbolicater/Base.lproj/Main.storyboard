@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -653,7 +654,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider=""/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
@@ -669,25 +670,152 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="dbP-fF-A8F" kind="relationship" relationship="window.shadowedContentViewController" id="Jze-M4-4as"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="85" y="241"/>
         </scene>
-        <!--View Controller-->
+        <!--Tab View Controller-->
+        <scene sceneID="DjG-1N-9Kl">
+            <objects>
+                <tabViewController selectedTabViewItemIndex="1" id="dbP-fF-A8F" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem label="Umeng" identifier="" id="Obd-gX-t37"/>
+                        <tabViewItem label="CrashLog" id="TVN-ob-AU5"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="Svv-Ed-ht3">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                    </tabView>
+                    <connections>
+                        <segue destination="nkU-vU-oBP" kind="relationship" relationship="tabItems" id="fbM-Dl-yY5"/>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="tabItems" id="JNB-dY-sWg"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="O00-On-K8P" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85" y="717"/>
+        </scene>
+        <!--Umeng Crash Parser View Controller-->
+        <scene sceneID="3Le-YX-Vfa">
+            <objects>
+                <viewController id="nkU-vU-oBP" customClass="UmengCrashParserViewController" sceneMemberID="viewController">
+                    <view key="view" id="yqj-xX-a1B">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zb-PA-sNP">
+                                <rect key="frame" x="20" y="45" width="440" height="235"/>
+                                <clipView key="contentView" id="N1E-Mc-5Ba">
+                                    <rect key="frame" x="1" y="1" width="423" height="233"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" dashSubstitution="YES" smartInsertDelete="YES" id="Z4h-KF-aTW">
+                                            <rect key="frame" x="0.0" y="0.0" width="423" height="233"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="423" height="233"/>
+                                            <size key="maxSize" width="463" height="10000000"/>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="LzF-hV-hib">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="q4y-fN-AiN">
+                                    <rect key="frame" x="424" y="1" width="15" height="233"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4qg-DB-bW6">
+                                <rect key="frame" x="200" y="13" width="81" height="32"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xP6-jb-K4H">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="go:" target="nkU-vU-oBP" id="Wjm-sR-kpt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="4qg-DB-bW6" secondAttribute="bottom" constant="20" id="AAY-a6-pM7"/>
+                            <constraint firstItem="4qg-DB-bW6" firstAttribute="centerX" secondItem="yqj-xX-a1B" secondAttribute="centerX" id="NC6-bc-BQv"/>
+                            <constraint firstItem="6zb-PA-sNP" firstAttribute="top" secondItem="yqj-xX-a1B" secondAttribute="top" constant="20" id="UkD-q7-avG"/>
+                            <constraint firstItem="4qg-DB-bW6" firstAttribute="top" secondItem="6zb-PA-sNP" secondAttribute="bottom" constant="4" id="dvS-WH-jj7"/>
+                            <constraint firstItem="6zb-PA-sNP" firstAttribute="leading" secondItem="yqj-xX-a1B" secondAttribute="leading" constant="20" id="dzT-E5-Hgg"/>
+                            <constraint firstAttribute="trailing" secondItem="6zb-PA-sNP" secondAttribute="trailing" constant="20" id="uSs-As-lga"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="Z4h-KF-aTW" id="EAW-GA-5RY"/>
+                    </connections>
+                </viewController>
+                <customObject id="Lk6-Ka-WVq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="843" y="453"/>
+        </scene>
+        <!--Crash Symbolicater View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="CrashSymbolicaterViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zIg-vi-wTb">
+                                <rect key="frame" x="200" y="39" width="81" height="32"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ocb-ux-fzS">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="go:" target="XfG-lQ-9wD" id="uP4-I1-Ed5"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cpL-qX-eGm">
+                                <rect key="frame" x="-2" y="233" width="484" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="CrashFilePath" id="Vfm-Re-tZb">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mec-Ly-7XE">
+                                <rect key="frame" x="-2" y="208" width="484" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="AppFilePath" id="A9N-8L-oZa">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="zIg-vi-wTb" secondAttribute="bottom" constant="46" id="6ux-4H-TdU"/>
+                            <constraint firstAttribute="trailing" secondItem="cpL-qX-eGm" secondAttribute="trailing" id="EQl-AQ-qLu"/>
+                            <constraint firstItem="zIg-vi-wTb" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Fol-5x-SuN"/>
+                            <constraint firstItem="cpL-qX-eGm" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="J4g-eX-hPB"/>
+                            <constraint firstItem="mec-Ly-7XE" firstAttribute="top" secondItem="cpL-qX-eGm" secondAttribute="bottom" constant="8" id="NDg-ee-CuF"/>
+                            <constraint firstItem="cpL-qX-eGm" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="b55-xl-wNF"/>
+                            <constraint firstItem="mec-Ly-7XE" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="iuB-wl-wLB"/>
+                            <constraint firstAttribute="trailing" secondItem="mec-Ly-7XE" secondAttribute="trailing" id="r2F-g9-CNr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="appFilePathLabel" destination="mec-Ly-7XE" id="Jkk-fZ-Eye"/>
+                        <outlet property="crashFilePathLabel" destination="cpL-qX-eGm" id="Y7a-JS-DFX"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="843" y="862"/>
         </scene>
     </scenes>
 </document>
