@@ -10,18 +10,12 @@
 
 @implementation DragView
 
-- (instancetype)initWithFrame:(NSRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self registerForDraggedTypes:@[NSFilenamesPboardType]];
-    }
-    return self;
-}
-
-
 -(NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender{
     return NSDragOperationGeneric;
+}
+
+-(void)viewDidMoveToSuperview{
+    [self registerForDraggedTypes:@[NSFilenamesPboardType]];
 }
 
 -(BOOL)performDragOperation:(id<NSDraggingInfo>)sender{

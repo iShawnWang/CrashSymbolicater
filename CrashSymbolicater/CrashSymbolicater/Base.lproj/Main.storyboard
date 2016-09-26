@@ -700,10 +700,10 @@
             </objects>
             <point key="canvasLocation" x="85" y="717"/>
         </scene>
-        <!--Umeng Crash Parser View Controller-->
+        <!--UmengCrashParserViewController-->
         <scene sceneID="3Le-YX-Vfa">
             <objects>
-                <viewController id="nkU-vU-oBP" customClass="UmengCrashParserViewController" sceneMemberID="viewController">
+                <viewController id="nkU-vU-oBP" userLabel="UmengCrashParserViewController" customClass="UmengCrashParserViewController" sceneMemberID="viewController">
                     <view key="view" id="yqj-xX-a1B">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -734,8 +734,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4qg-DB-bW6">
-                                <rect key="frame" x="200" y="13" width="81" height="32"/>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qev-zd-nQX">
+                                <rect key="frame" x="18" y="20" width="355" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="b1a-jV-Sir">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4qg-DB-bW6">
+                                <rect key="frame" x="385" y="13" width="81" height="32"/>
                                 <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xP6-jb-K4H">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -747,14 +755,19 @@
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="4qg-DB-bW6" secondAttribute="bottom" constant="20" id="AAY-a6-pM7"/>
-                            <constraint firstItem="4qg-DB-bW6" firstAttribute="centerX" secondItem="yqj-xX-a1B" secondAttribute="centerX" id="NC6-bc-BQv"/>
+                            <constraint firstAttribute="bottom" secondItem="qev-zd-nQX" secondAttribute="bottom" constant="20" id="L6u-9z-4Wp"/>
+                            <constraint firstItem="qev-zd-nQX" firstAttribute="top" secondItem="6zb-PA-sNP" secondAttribute="bottom" constant="8" id="Lc2-ug-Isc"/>
+                            <constraint firstItem="qev-zd-nQX" firstAttribute="leading" secondItem="yqj-xX-a1B" secondAttribute="leading" constant="20" id="LpJ-aJ-5sl"/>
+                            <constraint firstItem="4qg-DB-bW6" firstAttribute="leading" secondItem="qev-zd-nQX" secondAttribute="trailing" constant="20" id="PfO-Yx-BTU"/>
                             <constraint firstItem="6zb-PA-sNP" firstAttribute="top" secondItem="yqj-xX-a1B" secondAttribute="top" constant="20" id="UkD-q7-avG"/>
                             <constraint firstItem="4qg-DB-bW6" firstAttribute="top" secondItem="6zb-PA-sNP" secondAttribute="bottom" constant="4" id="dvS-WH-jj7"/>
                             <constraint firstItem="6zb-PA-sNP" firstAttribute="leading" secondItem="yqj-xX-a1B" secondAttribute="leading" constant="20" id="dzT-E5-Hgg"/>
+                            <constraint firstAttribute="trailing" secondItem="4qg-DB-bW6" secondAttribute="trailing" constant="20" id="uAH-rE-L88"/>
                             <constraint firstAttribute="trailing" secondItem="6zb-PA-sNP" secondAttribute="trailing" constant="20" id="uSs-As-lga"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dysmFilePathLabel" destination="qev-zd-nQX" id="mjb-LW-QGe"/>
                         <outlet property="textView" destination="Z4h-KF-aTW" id="EAW-GA-5RY"/>
                     </connections>
                 </viewController>
@@ -762,10 +775,10 @@
             </objects>
             <point key="canvasLocation" x="843" y="453"/>
         </scene>
-        <!--Crash Symbolicater View Controller-->
+        <!--CrashSymbolicaterViewController-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="CrashSymbolicaterViewController" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" userLabel="CrashSymbolicaterViewController" customClass="CrashSymbolicaterViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -21,16 +21,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.dragView=[[DragView alloc]initWithFrame:self.view.bounds];
-    self.dragView.delegate =self;
     [self.view addSubview:self.dragView];
+}
 
-    [self.view registerForDraggedTypes:@[NSFilenamesPboardType]];
+-(DragView *)dragView{
+    if(!_dragView){
+        _dragView=[[DragView alloc]initWithFrame:NSMakeRect(0,0,20,20)];
+        _dragView.wantsLayer=YES;
+        _dragView.layer.backgroundColor=[NSColor redColor].CGColor;
+        _dragView.delegate=self;
+    }
+    return _dragView;
 }
 
 -(void)letUsGo{
-    NSString *path= [[NSBundle mainBundle]pathForResource:@"symbolicatecrash" ofType:@""];
+    NSString *path= [[NSBundle mainBundle]pathForResource:@"symbolicatecrash" ofType:nil];
     
     NSTask *task=[[NSTask alloc]init];
     NSPipe *pipe= [NSPipe pipe];
@@ -57,7 +62,7 @@
     
     if(paths.count==1){
         NSString *filePath = paths[0];
-        return [self receiveAppFile:filePath] || [self receiveCrashFile:filePath];
+        return [self receiveAppFile:filePath] || [self receiveCrashFile:filePath]; //得到了*.app 或者 *.crash 的文件路径
     }else{
         __block NSInteger countOfValidatePath;
         [paths enumerateObjectsUsingBlock:^(NSString *path, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -65,7 +70,7 @@
                 countOfValidatePath++;
             }
         }];
-        return countOfValidatePath == 2; //我们得到了 *.app 和 *.crash 文件路径
+        return countOfValidatePath == 2; //同时得到了 *.app 和 *.crash 文件路径
     }
 }
 

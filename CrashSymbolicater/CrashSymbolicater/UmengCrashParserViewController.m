@@ -7,17 +7,28 @@
 //
 
 #import "UmengCrashParserViewController.h"
+#import "DragView.h"
 
-@interface UmengCrashParserViewController ()
-
+@interface UmengCrashParserViewController ()<DragViewDelegate>
+@property (nonatomic, strong) DragView *dragView;
 @end
 
 @implementation UmengCrashParserViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view addSubview: self.dragView];
 }
 
+-(DragView *)dragView{
+    if(!_dragView){
+        _dragView=[[DragView alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
+        _dragView.wantsLayer=YES;
+        _dragView.layer.backgroundColor=[NSColor redColor].CGColor;
+        _dragView.delegate=self;
+    }
+    return _dragView;
+}
 
 -(void)prettyCrashLog{
     
@@ -63,7 +74,7 @@
             [task setStandardOutput:pipe];
             
             [task setLaunchPath:@"/bin/sh"];
-            NSString *baba=[NSString stringWithFormat:@"atos -arch %@ -o /Users/pi/Desktop/remote  -l %@ %@ ",cupType,slideAddress,resultStr];
+            NSString *baba=[NSString stringWithFormat:@"atos -arch %@ -o %@  -l %@ %@ ",cupType,self.dysmFilePathLabel.stringValue,slideAddress,resultStr];
             [task setArguments:@[@"-c",baba]];
             [task launch];
             
@@ -89,7 +100,6 @@
         [heheda addAttribute:NSForegroundColorAttributeName value:[NSColor redColor] range:[rangeValue rangeValue]];
         [self.textView.textStorage setAttributedString:heheda];
     }];
-
     
     //    self.task= [[NSTask alloc]init];
     //    [self.task setLaunchPath:@"/bin/sh"];
@@ -111,4 +121,11 @@
 - (IBAction)go:(id)sender {
     [self prettyCrashLog];
 }
+
+#pragma mark - DragViewDelegate
+-(BOOL)dragView:(NSView *)dragView didReceiveFilePaths:(NSArray *)paths{
+    [self.dysmFilePathLabel setStringValue:[paths firstObject]];
+    return YES;
+}
+
 @end

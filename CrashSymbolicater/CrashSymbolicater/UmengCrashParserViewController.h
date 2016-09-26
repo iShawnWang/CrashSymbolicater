@@ -10,4 +10,5 @@
 
 @interface UmengCrashParserViewController : NSViewController
 @property (unsafe_unretained) IBOutlet NSTextView *textView;
+@property (weak) IBOutlet NSTextField *dysmFilePathLabel;
 @end
