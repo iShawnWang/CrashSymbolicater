@@ -7,10 +7,9 @@
 //
 
 #import "UmengCrashParserViewController.h"
-#import "DragView.h"
+#import <Masonry.h>
 
 @interface UmengCrashParserViewController ()<DragViewDelegate>
-@property (nonatomic, strong) DragView *dragView;
 @end
 
 @implementation UmengCrashParserViewController
@@ -18,17 +17,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview: self.dragView];
+    self.dragView.wantsLayer=YES;
+    NSImageView *imageView = [[NSImageView alloc]init];
+    imageView.image=[NSImage imageNamed:@"Rectangle"];
+    
+    [self.dragView addSubview:imageView];
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.dragView);
+    }];
+    self.dragView.delegate=self;
 }
 
--(DragView *)dragView{
-    if(!_dragView){
-        _dragView=[[DragView alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
-        _dragView.wantsLayer=YES;
-        _dragView.layer.backgroundColor=[NSColor redColor].CGColor;
-        _dragView.delegate=self;
-    }
-    return _dragView;
-}
+//-(DragView *)dragView{
+//    if(!_dragView){
+//        _dragView=[[DragView alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
+//        _dragView.wantsLayer=YES;
+//        _dragView.layer.backgroundColor=[NSColor redColor].CGColor;
+//        _dragView.delegate=self;
+//    }
+//    return _dragView;
+//}
 
 -(void)prettyCrashLog{
     
@@ -125,6 +133,7 @@
 #pragma mark - DragViewDelegate
 -(BOOL)dragView:(NSView *)dragView didReceiveFilePaths:(NSArray *)paths{
     [self.dysmFilePathLabel setStringValue:[paths firstObject]];
+    self.dragView.hidden=YES;
     return YES;
 }
 

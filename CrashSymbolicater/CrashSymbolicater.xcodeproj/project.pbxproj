@@ -13,6 +13,7 @@
 		0E4AAAB61D97D84200409839 /* UmengCrashParserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4AAAB51D97D84200409839 /* UmengCrashParserViewController.m */; };
 		0E65D68C1D95A374007B974D /* symbolicatecrash in Resources */ = {isa = PBXBuildFile; fileRef = 0E65D68B1D95A374007B974D /* symbolicatecrash */; };
 		0E8CE77F1D96EEFA00D739F1 /* DragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8CE77C1D96EEFA00D739F1 /* DragView.m */; };
+		0EA4621F1DD383D30045B451 /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA4621E1DD383D30045B451 /* WindowController.m */; };
 		0EBCCC4C1D8D57ED0057EE20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBCCC4B1D8D57ED0057EE20 /* AppDelegate.m */; };
 		0EBCCC4F1D8D57ED0057EE20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBCCC4E1D8D57ED0057EE20 /* main.m */; };
 		0EBCCC521D8D57ED0057EE20 /* CrashSymbolicaterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBCCC511D8D57ED0057EE20 /* CrashSymbolicaterViewController.m */; };
@@ -52,6 +53,8 @@
 		0E65D68B1D95A374007B974D /* symbolicatecrash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = symbolicatecrash; sourceTree = "<group>"; };
 		0E8CE77B1D96EEFA00D739F1 /* DragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragView.h; sourceTree = "<group>"; };
 		0E8CE77C1D96EEFA00D739F1 /* DragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragView.m; sourceTree = "<group>"; };
+		0EA4621D1DD383D30045B451 /* WindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowController.h; sourceTree = "<group>"; };
+		0EA4621E1DD383D30045B451 /* WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowController.m; sourceTree = "<group>"; };
 		0EBCCC471D8D57ED0057EE20 /* CrashSymbolicater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrashSymbolicater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBCCC4A1D8D57ED0057EE20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0EBCCC4B1D8D57ED0057EE20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 				0EBCCC4D1D8D57ED0057EE20 /* Supporting Files */,
 				0E0A37871D977015002A3D6A /* MBProgressHUD+Addition.h */,
 				0E0A37881D977015002A3D6A /* MBProgressHUD+Addition.m */,
+				0EA4621D1DD383D30045B451 /* WindowController.h */,
+				0EA4621E1DD383D30045B451 /* WindowController.m */,
 			);
 			path = CrashSymbolicater;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 				0EBCCC651D8D57EE0057EE20 /* Frameworks */,
 				0EBCCC661D8D57EE0057EE20 /* Resources */,
 				FF983FFBB45C7641844EDD93 /* [CP] Copy Pods Resources */,
+				7E64D533A64D01FDC23C1D64 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -375,7 +381,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		3E0E93066141D2DAE967AEC8 /* [CP] Embed Pods Frameworks */ = {
@@ -408,6 +414,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrashSymbolicater/Pods-CrashSymbolicater-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7E64D533A64D01FDC23C1D64 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrashSymbolicaterUITests/Pods-CrashSymbolicaterUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B43762E3E0F329FAC8A89586 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -420,7 +441,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C3F6235BB47673E790F4F97A /* [CP] Check Pods Manifest.lock */ = {
@@ -435,7 +456,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E9E4A3AC49DCC0422CA72ADA /* [CP] Copy Pods Resources */ = {
@@ -476,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E4AAAB61D97D84200409839 /* UmengCrashParserViewController.m in Sources */,
+				0EA4621F1DD383D30045B451 /* WindowController.m in Sources */,
 				0EBCCC521D8D57ED0057EE20 /* CrashSymbolicaterViewController.m in Sources */,
 				0EBCCC4F1D8D57ED0057EE20 /* main.m in Sources */,
 				0E0A37861D977008002A3D6A /* MBProgressHUD.m in Sources */,

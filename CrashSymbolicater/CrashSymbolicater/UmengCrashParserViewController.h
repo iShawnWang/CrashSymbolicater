@@ -7,8 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "DragView.h"
 
 @interface UmengCrashParserViewController : NSViewController
 @property (unsafe_unretained) IBOutlet NSTextView *textView;
 @property (weak) IBOutlet NSTextField *dysmFilePathLabel;
+@property (weak) IBOutlet DragView *dragView;
 @end

@@ -1,3 +1,15 @@
-PODFILE CHECKSUM: e52af33575f58e557dab1d89e1f45258eb9dc184
+PODS:
+  - INAppStoreWindow (1.4)
+  - Masonry (1.0.2)
 
-COCOAPODS: 1.0.1
+DEPENDENCIES:
+  - INAppStoreWindow
+  - Masonry
+
+SPEC CHECKSUMS:
+  INAppStoreWindow: 4fd569f7435557239e78316de139e886ccbaec4d
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+
+PODFILE CHECKSUM: d6bd53884e3ab16f4238f60888ca4b86c9219e40
+
+COCOAPODS: 1.1.1
